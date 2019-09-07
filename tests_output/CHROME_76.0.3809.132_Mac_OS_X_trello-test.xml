@@ -5,9 +5,9 @@
 
   <testsuite name="trello-test"
     errors="0" failures="0" hostname="" id="" package="trello-test" skipped="0"
-    tests="1" time="6.068" timestamp="">
+    tests="1" time="8.115" timestamp="">
   
-    <testcase name="Login to trello" classname="trello-test" time="6.068" assertions="4">
+    <testcase name="Login to trello" classname="trello-test" time="8.115" assertions="4">
 
     
 

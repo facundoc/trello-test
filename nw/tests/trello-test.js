@@ -4,18 +4,9 @@ var helper = require('../../utils/helper')
 
 
 module.exports = {
-    // afterEach : function(browser) {
-    //     const board = browser.page.board()
-    //     board
-    //         .click(".list-card-details")
-    //         .click(".js-archive-card")
-    //         .click(".js-delete-card")
-    //         .click(".js-confirm")
-    //         .end()
-    // },
 
-    beforeEach : function(){
-        helper.deleteAllCards()
+    beforeEach : async function(){
+        await helper.deleteAllCards()
     },
 
     'Login to trello': (browser) => {

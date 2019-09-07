@@ -17,12 +17,10 @@ var listId = null
 var cardId = null;
 
 describe('Trello Api test', function(){
-
-before(function(){
-    helper.deleteAllCards()
+this.timeout(10000000)
+before( async function(){
+    await helper.deleteAllCards()
     
-    
-
 })
     describe('Test the add to card functionality', function(){
         
