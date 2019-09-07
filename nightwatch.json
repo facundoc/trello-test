@@ -11,7 +11,6 @@
     "check_process_delay": 5000,
     "cli_args" : {
       "webdriver.chrome.driver" : "./node_modules/chromedriver/bin/chromedriver",
-      "webdriver.ie.driver" : ""
     }
   },
 
@@ -27,7 +26,10 @@
       "desiredCapabilities": {
         "browserName": "chrome",
         "chromeOptions": {
-          "w3c": false
+          "w3c": false,
+          "args": [
+						"--headless"
+					]
         }
       }
     }
