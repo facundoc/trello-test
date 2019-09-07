@@ -1,0 +1,24 @@
+{
+  "name": "trellotest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "faker": "^4.1.0",
+    "mocha": "^6.2.0",
+    "nightwatch": "^1.2.2",
+    "request": "^2.88.0",
+    "superagent": "^5.1.0",
+    "supertest": "^4.0.2"
+  },
+  "devDependencies": {
+    "chromedriver": "^76.0.1",
+    "selenium-server-standalone-jar": "^3.141.59"
+  }
+}

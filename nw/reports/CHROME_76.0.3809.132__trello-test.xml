@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="0"
+            tests="1">
+
+  <testsuite name="trello-test"
+    errors="1" failures="0" hostname="" id="" package="trello-test" skipped="0"
+    tests="1" time="2.517" timestamp="">
+  
+    <testcase name="Login to trello" classname="trello-test" time="2.517" assertions="1">
+
+    
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>
