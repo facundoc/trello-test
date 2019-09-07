@@ -17,8 +17,8 @@ var listId = null
 var cardId = null;
 
 describe('Trello Api test', function(){
-this.timeout(10000000)
-before( async function(){
+
+    before( async function(){
     await helper.deleteAllCards()
     
 })
