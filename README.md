@@ -7,8 +7,10 @@
 ### Instructions
 Download the project
 `$ git clone https://github.com/facundoc/trello-test.git`
+
 Navigate to the folder
 `$ cd trello-test `
+
 Install dependencies
 `$ npm install`
 
@@ -17,12 +19,19 @@ Install dependencies
 ## Running the tests
 
 In order to run the all the tests execute any of the command in the terminal
+
 **All Tests:**
+
 `npm test`
+
 **API Tests**
+
 `npm run test:api`
+
 **UI Tests**
+
 `npm run test:ui`
+
 
 ## Structure of the tests
 
