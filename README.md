@@ -39,7 +39,9 @@ In order to run the all the tests execute any of the command in the terminal
 ## Structure of the tests
 
 The folder `nw` contains the scripts, page objects and logs for the tests written using NightwatchJS
+
 The folder `api` contains the scripts for the tests written using Supertest and ran with Mocha
+
 The folder `utils` contains :
 
  - data.js file with the test data consumed by the scripts (both api and ui) 
