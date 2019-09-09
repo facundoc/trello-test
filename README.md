@@ -6,12 +6,15 @@
 [NodeJS](https://nodejs.org/en/download/package-manager/) and [Java](https://www.java.com/en/download/)
 ### Instructions
 Download the project
+
 `$ git clone https://github.com/facundoc/trello-test.git`
 
 Navigate to the folder
+
 `$ cd trello-test `
 
 Install dependencies
+
 `$ npm install`
 
 
