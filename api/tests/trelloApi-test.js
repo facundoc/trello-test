@@ -11,6 +11,8 @@ const token = data.api.server_token
 const base_url = data.api.base_url
 const title = data.cardTitle;
 
+const boardName = data.board.name
+
 request = request(base_url)
 var boardId = null
 var listId = null
@@ -19,9 +21,14 @@ var cardId = null;
 describe('Trello Api test', function(){
 
     before( async function(){
-    await helper.deleteAllCards()
+        var board = await helper.createBoard(boardName)
+        board_Id = board[0] 
+    });
     
-})
+    after( function(){
+         helper.deleteBoard(boardId)
+    });
+
     describe('Test the add to card functionality', function(){
         
         it('Verifies the test board exists', function(done){
@@ -39,12 +46,12 @@ describe('Trello Api test', function(){
                     for (i in res.body) {
                         e = res.body[i]
                     
-                        if(e.name == 'Test Board'){
+                        if(e.name == boardName){
                             boardId = e.id;
                             listId = e.lists[0].id
                         }
                         assert.isNotNull(boardId, 'The test board was not found')
-                        assert.isNotNull(listId, 'The To Do lint in Test Board was not found')
+                        assert.isNotNull(listId, 'A list in Test Board was not found')
                     }
                 }).end(done)
         });

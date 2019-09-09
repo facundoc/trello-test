@@ -1,15 +1,27 @@
 var data = require('../../utils/data');
 var testCardTitle = data.cardTitle;
+var boardName = data.board.name
+var listName = data.board.listName
 var helper = require('../../utils/helper')
-
+var boardUrl
+var boardId
 
 module.exports = {
-
     beforeEach : async function(){
-        await helper.deleteAllCards()
+        let board = await helper.createBoard(boardName)
+        
+        boardUrl = board[1]
+        boardId = board[0] 
+
+        await helper.createListOnBoard(listName, boardId)       
+        
     },
 
-    'Login to trello': (browser) => {
+    afterEach : function(){
+        helper.deleteBoard(boardId)
+    },
+
+    'Verifies the creation of a card': (browser) => {
         const login = browser.page.login();
         const dashboard = browser.page.dashboard()
         const board = browser.page.board()
@@ -17,7 +29,7 @@ module.exports = {
         login
             .navigate()
             .completeLogin()
-        //Selects board
+        //Navigates to previously created board
         dashboard
             .waitForElementPresent('@boards')
             .click("@testBoard")

@@ -1,6 +1,6 @@
 node_modules
 nw/reports
 nw/logs
-tests/output
+tests_output
 chromedriver.log
 docker-compose.yml

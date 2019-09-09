@@ -1,6 +1,8 @@
 var faker = require('faker');
 
-var cardTitle = faker.lorem.sentence();
+var cardTitle = faker.lorem.sentence()
+var boardName = faker.lorem.words()
+var listName = faker.lorem.word();
 
 var user = {
     
@@ -18,9 +20,15 @@ var api = {
     server_token: "3149f16b4e6f1cb3db5909d9596569c840e198c4e503ac5a2a4a4e0cb2fa1278"
 }
 
+var board = {
+    name : boardName,
+    listName : listName
+}
+
 module.exports = {
     cardTitle,
     user, 
-    api
+    api, 
+    board
 
 }

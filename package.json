@@ -1,15 +1,14 @@
 {
   "name": "trellotest",
   "version": "1.0.0",
-  "description": "",
+  "description": "Automated tests for UI and API for creating a card in trello",
   "main": "index.js",
   "scripts": {
     "test": "nightwatch nw/tests && mocha api/tests",
     "test:api": "mocha api/tests",
     "test:ui": "nightwatch nw/tests"
-
   },
-  "author": "",
+  "author": "facucampi@gmail.com",
   "license": "ISC",
   "dependencies": {
     "chai": "^4.2.0",

@@ -1,6 +1,6 @@
 const seleniumServer = require('selenium-server-standalone-jar')
 const chromedriver = require('chromedriver')
-const dockerSeleniumHub = '127.0.0.1'
+const seleniumHub = '127.0.0.1'
 
 
 module.exports = {
@@ -11,18 +11,12 @@ module.exports = {
       start_process : true,
       server_path : seleniumServer.path,
       log_path : "nw/logs",
-      host : dockerSeleniumHub,
+      host : seleniumHub,
       port : 4444,
       check_process_delay: 5000,
       cli_args : {
         "webdriver.chrome.driver" : chromedriver.path,
       }
-    },
-  
-    webdriver : {
-      start_process: true,
-      server_path: "node_modules/.bin/chromedriver",
-      port: 9515
     },
   
     test_settings : {
